@@ -11,7 +11,7 @@ public class ERPSolutionTemplateBean {
     private String lERPSolAllowUnSubmit;
     private String lERPSolIsAllow;
     private String lERPSolAllowPrint;
-    private String lERPModuleId;//MODULE_ACTION id from SYS_PROGRAM
+    private String lERPSolModuleId;//MODULE_ACTION id from SYS_PROGRAM
   
     public ERPSolutionTemplateBean() {
         super();
@@ -98,12 +98,13 @@ public class ERPSolutionTemplateBean {
         return lERPSolAllowPrint;
     }
 
-    public void setLERPModuleId(String lERPModuleId) {
-        this.lERPModuleId = lERPModuleId;
+
+    public void setLERPSolModuleId(String lERPSolModuleId) {
+        this.lERPSolModuleId = lERPSolModuleId;
     }
 
-    public String getLERPModuleId() {
-        return lERPModuleId;
+    public String getLERPSolModuleId() {
+        return lERPSolModuleId;
     }
 
 }
