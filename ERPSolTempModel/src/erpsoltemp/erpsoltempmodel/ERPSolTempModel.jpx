@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE JboProject SYSTEM "jbo_03_01.dtd">
+<!---->
+<JboProject
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="ERPSolTempModel"
+  Version="12.1.3.10.47"
+  SeparateXMLFiles="true"
+  PackageName="erpsoltemp.erpsoltempmodel">
+  <DesignTime>
+    <Attr Name="_jprName" Value="../../../ERPSolTempModel.jpr"/>
+    <Attr Name="_jbo.TypeMapEntries" Value="OracleApps"/>
+    <Attr Name="_NamedConnection" Value="ERPSolTemplateConn"/>
+    <Attr Name="_appModuleNames0" Value="erpsoltemp.erpsoltempmodel.erpsoltempam.ERPSolTempAppModule"/>
+  </DesignTime>
+  <Containee
+    Name="erpsoltempam"
+    PackageName="erpsoltemp.erpsoltempmodel.erpsoltempam"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_AM" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="erpsoltempeo"
+    PackageName="erpsoltemp.erpsoltempmodel.erpsoltempeo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_EO" Value="true"/>
+    </DesignTime>
+  </Containee>
+  <Containee
+    Name="erpsoltempvo"
+    PackageName="erpsoltemp.erpsoltempmodel.erpsoltempvo"
+    ObjectType="JboPackage">
+    <DesignTime>
+      <Attr Name="_VO" Value="true"/>
+    </DesignTime>
+  </Containee>
+</JboProject>

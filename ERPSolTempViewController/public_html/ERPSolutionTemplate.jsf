@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <af:pageTemplateDef xmlns:af="http://xmlns.oracle.com/adf/faces/rich" var="attrs" definition="private"
-                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component">
+                    xmlns:afc="http://xmlns.oracle.com/adf/faces/rich/component" xmlns:f="http://java.sun.com/jsf/core">
     <af:xmlContent>
         <afc:component>
             <afc:description/>
@@ -13,4 +13,19 @@
             </afc:facet>
         </afc:component>
     </af:xmlContent>
+    <af:decorativeBox id="pt_db1" dimensionsFrom="parent">
+        <f:facet name="center">
+            <af:panelSplitter id="pt_ps1" splitterPosition="250" dimensionsFrom="parent">
+                <f:facet name="first">
+                    <af:panelBox text="Application Menu" id="pt_pb1" showDisclosure="false">
+                        <f:facet name="toolbar"/>
+                    </af:panelBox>
+                </f:facet>
+                <f:facet name="second">
+                    <af:facetRef facetName="erptempmain"/>
+                </f:facet>
+            </af:panelSplitter>
+        </f:facet>
+        <f:facet name="top"/>
+    </af:decorativeBox>
 </af:pageTemplateDef>

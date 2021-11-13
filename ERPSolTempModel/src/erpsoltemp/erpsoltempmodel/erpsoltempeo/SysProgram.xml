@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="windows-1252" ?>
+<!DOCTYPE Entity SYSTEM "jbo_03_01.dtd">
+<!---->
+<Entity
+  xmlns="http://xmlns.oracle.com/bc4j"
+  Name="SysProgram"
+  Version="12.1.3.10.47"
+  InheritPersonalization="merge"
+  DBObjectType="table"
+  DBObjectName="SYS_PROGRAM"
+  AliasName="SysProgram"
+  BindingStyle="OracleName">
+  <Attribute
+    Name="Moduleid"
+    IsNotNull="true"
+    Precision="10"
+    ColumnName="MODULEID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Levelid"
+    IsNotNull="true"
+    Precision="15"
+    ColumnName="LEVELID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModuleName"
+    IsNotNull="true"
+    Precision="75"
+    ColumnName="MODULE_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="75"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Projectid"
+    IsNotNull="true"
+    Precision="10"
+    ColumnName="PROJECTID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ModuleType"
+    IsNotNull="true"
+    Precision="1"
+    ColumnName="MODULE_TYPE"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="ExecName"
+    IsNotNull="true"
+    Precision="50"
+    ColumnName="EXEC_NAME"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MenuText"
+    Precision="50"
+    ColumnName="MENU_TEXT"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="50"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="NoOfDays"
+    ColumnName="NO_OF_DAYS"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Typeid"
+    Precision="15"
+    ColumnName="TYPEID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Categoryid"
+    Precision="15"
+    ColumnName="CATEGORYID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="MenuId"
+    Precision="15"
+    ColumnName="MENU_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="LineNo"
+    ColumnName="LINE_NO"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="Doctypeid"
+    Precision="15"
+    ColumnName="DOCTYPEID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Menuid"
+    Precision="15"
+    ColumnName="MENUID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Parentid"
+    Precision="15"
+    ColumnName="PARENTID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="15"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="AllowCustomerTrans"
+    Precision="1"
+    ColumnName="ALLOW_CUSTOMER_TRANS"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="Foruser"
+    Precision="2"
+    ColumnName="FORUSER"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="2"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="SeqNo"
+    Precision="7"
+    Scale="2"
+    ColumnName="SEQ_NO"
+    SQLType="NUMERIC"
+    Type="java.math.BigDecimal"
+    ColumnType="NUMBER"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true"/>
+  <Attribute
+    Name="ParameterFormId"
+    Precision="10"
+    ColumnName="PARAMETER_FORM_ID"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="10"/>
+    </DesignTime>
+  </Attribute>
+  <Attribute
+    Name="AuditCheck"
+    Precision="1"
+    ColumnName="AUDIT_CHECK"
+    SQLType="VARCHAR"
+    Type="java.lang.String"
+    ColumnType="VARCHAR2"
+    TableName="SYS_PROGRAM"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DisplaySize" Value="1"/>
+    </DesignTime>
+  </Attribute>
+  <Key
+    Name="SysprogramPrimaryKey"
+    PrimaryKey="true">
+    <DesignTime>
+      <Attr Name="_DBObjectName" Value="SYSPROGRAM_PRIMARY_KEY"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Moduleid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Levelid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ModuleName"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Projectid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ModuleType"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ExecName"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.MenuText"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.NoOfDays"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Typeid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Categoryid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.MenuId"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.LineNo"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Doctypeid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Menuid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Parentid"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.AllowCustomerTrans"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Foruser"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.SeqNo"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ParameterFormId"/>
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.AuditCheck"/>
+    </AttrArray>
+  </Key>
+</Entity>
