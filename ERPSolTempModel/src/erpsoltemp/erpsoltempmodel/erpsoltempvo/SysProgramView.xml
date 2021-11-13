@@ -142,4 +142,15 @@
     EntityAttrName="AuditCheck"
     EntityUsage="SysProgram"
     AliasName="AUDIT_CHECK"/>
+  <ViewLinkAccessor
+    Name="ParentidSysProgramView"
+    ViewLink="erpsoltemp.erpsoltempmodel.erpsoltemplink.SysProgramSysProgramModuleParentLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="SysProgramView"
+    ViewLink="erpsoltemp.erpsoltempmodel.erpsoltemplink.SysProgramSysProgramModuleParentLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

@@ -32,8 +32,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -46,8 +45,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="75"/>
     </DesignTime>
@@ -60,8 +58,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
@@ -74,8 +71,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -88,8 +84,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -101,8 +96,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="50"/>
     </DesignTime>
@@ -113,8 +107,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true"/>
+    TableName="SYS_PROGRAM"/>
   <Attribute
     Name="Typeid"
     Precision="15"
@@ -122,8 +115,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -135,8 +127,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -148,8 +139,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -160,8 +150,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true"/>
+    TableName="SYS_PROGRAM"/>
   <Attribute
     Name="Doctypeid"
     Precision="15"
@@ -169,8 +158,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -182,8 +170,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -195,8 +182,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="15"/>
     </DesignTime>
@@ -208,8 +194,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
@@ -221,8 +206,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="2"/>
     </DesignTime>
@@ -235,8 +219,7 @@
     SQLType="NUMERIC"
     Type="java.math.BigDecimal"
     ColumnType="NUMBER"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true"/>
+    TableName="SYS_PROGRAM"/>
   <Attribute
     Name="ParameterFormId"
     Precision="10"
@@ -244,8 +227,7 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="10"/>
     </DesignTime>
@@ -257,12 +239,25 @@
     SQLType="VARCHAR"
     Type="java.lang.String"
     ColumnType="VARCHAR2"
-    TableName="SYS_PROGRAM"
-    PrimaryKey="true">
+    TableName="SYS_PROGRAM">
     <DesignTime>
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <AccessorAttribute
+    Name="SysProgram1"
+    Association="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysProgramModuleParentAssoc"
+    AssociationEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysProgramModuleParentAssoc.SysProgram1"
+    AssociationOtherEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysProgramModuleParentAssoc.SysProgram"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
+  <AccessorAttribute
+    Name="SysProgram"
+    Association="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysProgramModuleParentAssoc"
+    AssociationEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysProgramModuleParentAssoc.SysProgram"
+    AssociationOtherEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysProgramModuleParentAssoc.SysProgram1"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="SysprogramPrimaryKey"
     PrimaryKey="true">
@@ -271,25 +266,6 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Moduleid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Levelid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ModuleName"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Projectid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ModuleType"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ExecName"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.MenuText"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.NoOfDays"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Typeid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Categoryid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.MenuId"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.LineNo"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Doctypeid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Menuid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Parentid"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.AllowCustomerTrans"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.Foruser"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.SeqNo"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.ParameterFormId"/>
-      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysProgram.AuditCheck"/>
     </AttrArray>
   </Key>
 </Entity>
