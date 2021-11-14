@@ -8,6 +8,15 @@
   InheritPersonalization="merge"
   ClearCacheOnRollback="true">
   <ViewUsage
-    Name="SysProgramView1"
+    Name="SysProgramTransactionRO"
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+  <ViewUsage
+    Name="SysProgramReportRO"
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+  <ViewUsage
+    Name="SysProgramMasterRO"
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+  <ViewUsage
+    Name="SysProgramReverseRO"
     ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
 </AppModule>

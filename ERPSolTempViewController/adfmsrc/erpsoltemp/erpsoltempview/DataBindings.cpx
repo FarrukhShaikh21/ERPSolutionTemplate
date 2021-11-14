@@ -3,9 +3,11 @@
              SeparateXMLFiles="false" Package="erpsoltemp.erpsoltempview" ClientType="Generic">
   <pageMap>
     <page path="/ERPSolutionTemplate.jsf" usageId="erpsoltemp_erpsoltempview_ERPSolutionTemplatePageDef"/>
+    <page path="/ERPSolDemo.jsf" usageId="erpsoltemp_erpsoltempview_ERPSolDemoPageDef"/>
   </pageMap>
   <pageDefinitionUsages>
     <page id="erpsoltemp_erpsoltempview_ERPSolutionTemplatePageDef"
           path="erpsoltemp.erpsoltempview.pageDefs.ERPSolutionTemplatePageDef"/>
+    <page id="erpsoltemp_erpsoltempview_ERPSolDemoPageDef" path="erpsoltemp.erpsoltempview.pageDefs.ERPSolDemoPageDef"/>
   </pageDefinitionUsages>
 </Application>

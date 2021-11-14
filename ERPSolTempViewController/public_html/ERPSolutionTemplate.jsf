@@ -19,6 +19,12 @@
                 <f:facet name="first">
                     <af:panelBox text="Application Menu" id="pt_pb1" showDisclosure="false">
                         <f:facet name="toolbar"/>
+                        <af:panelAccordion discloseMany="false" id="pt_pa1">
+                            <af:showDetailItem id="pane1" text="Master" disclosed="true"/>
+                            <af:showDetailItem id="pane2" text="Transaction"/>
+                            <af:showDetailItem id="pane3" text="Reports"/>
+                            <af:showDetailItem id="pane4" text="Reverse"/>
+                        </af:panelAccordion>
                     </af:panelBox>
                 </f:facet>
                 <f:facet name="second">
