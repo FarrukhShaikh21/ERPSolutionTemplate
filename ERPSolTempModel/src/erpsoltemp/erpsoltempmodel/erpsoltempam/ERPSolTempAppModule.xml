@@ -9,13 +9,47 @@
   ClearCacheOnRollback="true">
   <ViewUsage
     Name="SysProgramTransactionRO"
-    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView">
+    <ViewCriteriaUsage
+      Name="SysProgramByProjectVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramByProjectVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramViewByLevelVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
+    <ParameterMap>
+      <PIMap Variable="P_ADF_PROJECTID">
+        <TransientExpression
+          trustMode="untrusted"><![CDATA["SO"]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="P_ADF_LEVELID">
+        <TransientExpression
+          trustMode="untrusted"><![CDATA["TRANSACTION"]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewUsage>
   <ViewUsage
     Name="SysProgramReportRO"
     ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
   <ViewUsage
     Name="SysProgramMasterRO"
-    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView">
+    <ViewCriteriaUsage
+      Name="SysProgramByProjectVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramByProjectVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramViewByLevelVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
+    <ParameterMap>
+      <PIMap Variable="P_ADF_PROJECTID">
+        <TransientExpression
+          trustMode="untrusted"><![CDATA["SO"]]></TransientExpression>
+      </PIMap>
+      <PIMap Variable="P_ADF_LEVELID">
+        <TransientExpression
+          trustMode="untrusted"><![CDATA["SETUP"]]></TransientExpression>
+      </PIMap>
+    </ParameterMap>
+  </ViewUsage>
   <ViewUsage
     Name="SysProgramReverseRO"
     ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>

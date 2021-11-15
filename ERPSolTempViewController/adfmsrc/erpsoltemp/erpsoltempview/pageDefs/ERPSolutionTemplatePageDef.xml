@@ -4,6 +4,33 @@
   <parameters/>
   <executables>
     <variableIterator id="variables"/>
+    <iterator Binds="SysProgramMasterRO" RangeSize="25" DataControl="ERPSolTempAppModuleDataControl"
+              id="SysProgramMasterROIterator"/>
+    <searchRegion Binds="SysProgramMasterROIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="SysProgramMasterROQuery"/>
+    <iterator Binds="SysProgramTransactionRO" RangeSize="25" DataControl="ERPSolTempAppModuleDataControl"
+              id="SysProgramTransactionROIterator"/>
+    <searchRegion Binds="SysProgramTransactionROIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="SysProgramTransactionROQuery"/>
   </executables>
-  <bindings/>
+  <bindings>
+    <tree IterBinding="SysProgramMasterROIterator" id="SysProgramMasterRO">
+      <nodeDefinition DefName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView" Name="SysProgramMasterRO0">
+        <AttrNames>
+          <Item Value="ModuleName"/>
+          <Item Value="Moduleid"/>
+          <Item Value="ExecName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SysProgramTransactionROIterator" id="SysProgramTransactionRO">
+      <nodeDefinition DefName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView" Name="SysProgramTransactionRO0">
+        <AttrNames>
+          <Item Value="Moduleid"/>
+          <Item Value="ModuleName"/>
+          <Item Value="ExecName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+  </bindings>
 </pageDefinition>
