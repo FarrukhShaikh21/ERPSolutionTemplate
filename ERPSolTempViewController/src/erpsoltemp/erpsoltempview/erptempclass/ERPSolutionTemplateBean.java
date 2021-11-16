@@ -132,8 +132,15 @@ public class ERPSolutionTemplateBean {
     }
 
     public String doERPSolGotoActivity() {
+        try {
+            System.out.println(ERPSolGlobClassModel.doGetUserCode());
+        } catch (Exception e) {
+            System.out.println("get user code exception");
+            // TODO: Add catch code
+            e.printStackTrace();
+        }
         doSetErpActivityRights(this.lERPSolModuleId);
-        return null;
+        return "ACTStartERPSolutionTaskFlow";
     }
   
     public void doSetErpActivityRights(String pModuleId) {
@@ -155,7 +162,7 @@ public class ERPSolutionTemplateBean {
         }
         System.out.println("this-is-doGetTransActivity-E");
         
-        System.out.println(             "SELECT NVL(A.CANADD,'N') ALLOW_ADD," +/*0*/
+        System.out.println(  "SELECT NVL(A.CANADD,'N') ALLOW_ADD," +/*0*/
                                          "NVL(A.CANDELETE,'N') ALLOW_DELETE," +/*1*/
                                          "NVL(A.RESTRICT_ACCESS,'Y') IS_ALLOW," +/*2*/
                                          "NVL(A.CANEDIT,'N') ALLOW_EDIT," + /*3*/
@@ -165,9 +172,11 @@ public class ERPSolutionTemplateBean {
                                          "NVL(A.H_LEVEL,'U') H_LEVEL " +/*7*/
                                          
                                          "FROM SYS_USERS_DETAIL A "+
-        //                                             "WHERE USERID='"+ERPSolGlobClassModel.doGetUserCode()+"'" +
-                                         "WHERE USERID='"+"ORACLE"+"'" +
+                                         "WHERE USERID='"+ERPSolGlobClassModel.doGetUserCode()+"'" +
+                                        // "WHERE USERID='"+"ORACLE"+"'" +
+                                         " AND A.RESTRICT_ACCESS='N' " +
                                          " AND MODULEID='"+getLERPSolModuleId()+"'");
+        System.out.println("temp-1");
 //        System.out.println(lERPModuleAction+ "lERPModuleAction");
 //        System.out.println("SELECT MAX(A.ALLOW_ADD) ALLOW_ADD,MAX(A.ALLOW_DELETE) ALLOW_DELETE,MAX(A.ACTION_RUNTIME) ACTION_RUNTIME,MAX(A.IS_ALLOW) IS_ALLOW,MAX(A.ALLOW_EDIT) ALLOW_EDIT,MAX(A.ALLOW_SUPERVISE) ALLOW_SUPERVISE ,MAX(A.ALLOW_UNSUPERVISE) ALLOW_UNSUPERVISE,MAX(A.ALLOW_CANCEL) ALLOW_CANCEL, MAX(A.ALLOW_EDIT_OTHER) ALLOW_EDIT_OTHER, MAX(A.ALLOW_PRINT) ALLOW_PRINT,MAX(A.SCAN_FILE) SCAN_FILE   FROM sys_users_detail A WHERE USERID='"+ERPGlobalsClass.doGetUserSno()+"-"+lERPSolModuleId+"'");
         vo =
@@ -183,40 +192,56 @@ public class ERPSolutionTemplateBean {
                                          
                                          "FROM SYS_USERS_DETAIL A "+
                                          "WHERE USERID='"+ERPSolGlobClassModel.doGetUserCode()+"'" +
-//                                         "WHERE USERID='"+"ORACLE"+"'" +
+                                         //"WHERE USERID='"+"ORACLE"+"'" +
                                          " AND A.RESTRICT_ACCESS='N' " +
                                          " AND MODULEID='"+getLERPSolModuleId()+"'");
+        System.out.println("temp-2");
         vo.executeQuery();
-    
+        System.out.println("lErpActivityRuntime"+ "ERP-ACT-"+lERPSolActionRuntime);
+        System.out.println("temp-3");
         if (vo.getRowCount()==0) {
             FacesContext.getCurrentInstance().addMessage(null, new FacesMessage("You Don't Have Rights on This Activity."));
             return;
 //            throw new JboException("You Don't Have Rights on This Activity.");
        }
         
+        System.out.println("temp-4");
         this.lERPSolAllowAdd = vo.first().getAttribute(0).toString();
+        System.out.println("temp-5");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_ERP_ALLOW_ADD",lERPSolAllowAdd);
-        
+        System.out.println("temp-6");
         this.lERPSolAllowDelete = vo.first().getAttribute(1).toString();
+        System.out.println("temp-7");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_ERP_ALLOW_DELETE",lERPSolAllowDelete);
+        System.out.println("temp-8");
         
         this.lERPSolIsAllow = vo.first().getAttribute(2).toString();
+        System.out.println("temp-9");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_ERP_IS_ALLOW",lERPSolIsAllow);
+        System.out.println("temp-10");
 
         this.lERPSolAllowEdit = vo.first().getAttribute(3).toString();
+        System.out.println("temp-11");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_ERP_ALLOW_EDIT",lERPSolAllowEdit);
-
+        System.out.println("temp-12");
         this.lERPSolAllowSubmit = vo.first().getAttribute(4).toString();
+        System.out.println("temp-13");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_ERP_ALLOW_SUPERVISE", lERPSolAllowSubmit);
+        System.out.println("temp-14");
 
         this.lERPSolAllowUnSubmit = vo.first().getAttribute(5).toString();
+        System.out.println("temp-15");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_ERP_ALLOW_UNSUPERVISE", lERPSolAllowUnSubmit);
-        
+        System.out.println("temp-16");
         this.lERPSolAllowPrint = vo.first().getAttribute(6).toString();
+        System.out.println("temp-17");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_ERP_ALLOW_PRINT",lERPSolAllowPrint);
+        System.out.println("temp-18");
 
         this.lERPSolHLevel = vo.first().getAttribute(7).toString();
+        System.out.println("temp-19");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_H_LEVEL",lERPSolHLevel);
+        System.out.println("temp-20");
 
         System.out.println(lERPSolModuleId +"lERPSolModuleId");
         System.out.println(lERPSolAllowAdd +"lERPSolAllowAdd");
@@ -235,7 +260,7 @@ public class ERPSolutionTemplateBean {
 
 
     public String doGotoERPSolActivity() {
-    //System.out.println("lErpActivityRuntime"+"ERP-ACT-"+lErpActivityRuntime);
+    System.out.println("lErpActivityRuntime"+ "ERP-ACT-"+lERPSolActionRuntime);
     return "ERP-ACT-"+lERPSolActionRuntime;
     }
     
