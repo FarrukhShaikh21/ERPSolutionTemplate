@@ -13,7 +13,7 @@
             </afc:facet>
         </afc:component>
     </af:xmlContent>
-    <af:decorativeBox id="pt_db1" dimensionsFrom="parent">
+    <af:decorativeBox id="pt_db1" dimensionsFrom="parent" topHeight="70px">
         <f:facet name="center">
             <af:panelSplitter id="pt_ps1" splitterPosition="250" dimensionsFrom="parent">
                 <f:facet name="first">
@@ -117,6 +117,24 @@
                 </f:facet>
             </af:panelSplitter>
         </f:facet>
-        <f:facet name="top"/>
+        <f:facet name="top">
+            <af:panelGridLayout id="pt_pgl1" inlineStyle="background-color:#f7f7f7">
+                <af:gridRow marginTop="5px" marginBottom="15px" id="pt_gr1">
+                    <af:gridCell marginStart="0px" width="10%" id="pt_gc1">
+                        <af:image source="#{resource['images:imgTheCompanyLogo.png']}" id="pt_i1" styleClass="AFStretchWidth" imageMapType="server"
+                                  inlineStyle="height:70px"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" id="pt_gc2">
+                        <af:spacer width="10" height="10" id="pt_s1"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" id="pt_gc3">
+                        <af:spacer width="10" height="10" id="pt_s2"/>
+                    </af:gridCell>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="0px" id="pt_gc4">
+                        <af:spacer width="10" height="10" id="pt_s3"/>
+                    </af:gridCell>
+                </af:gridRow>
+            </af:panelGridLayout>
+        </f:facet>
     </af:decorativeBox>
 </af:pageTemplateDef>
