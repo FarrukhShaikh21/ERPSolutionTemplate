@@ -233,4 +233,9 @@
     ViewLink="erpsoltemp.erpsoltempmodel.erpsoltemplink.SysProgramSysProgramModuleParentLink"
     Type="oracle.jbo.RowIterator"
     IsUpdateable="false"/>
+  <ViewLinkAccessor
+    Name="SysUsersDetailView"
+    ViewLink="erpsoltemp.erpsoltempmodel.erpsoltemplink.SysProgramSysUsersDetailModuleIDLink"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
 </ViewObject>

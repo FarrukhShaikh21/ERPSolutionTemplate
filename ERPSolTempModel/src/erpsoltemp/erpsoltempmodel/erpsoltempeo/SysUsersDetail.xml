@@ -285,6 +285,13 @@
       <Attr Name="_DisplaySize" Value="1"/>
     </DesignTime>
   </Attribute>
+  <AccessorAttribute
+    Name="SysProgram"
+    Association="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysUsersDetailModuleIDAssoc"
+    AssociationEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysUsersDetailModuleIDAssoc.SysProgram"
+    AssociationOtherEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysUsersDetailModuleIDAssoc.SysUsersDetail"
+    Type="oracle.jbo.server.EntityImpl"
+    IsUpdateable="true"/>
   <Key
     Name="XpksysUsersDetail"
     PrimaryKey="true">
@@ -320,6 +327,17 @@
     </DesignTime>
     <AttrArray Name="Attributes">
       <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysUsersDetail.Userid"/>
+    </AttrArray>
+  </Key>
+  <Key
+    Name="fk_SysUsersDetail">
+    <DesignTime>
+      <Attr Name="_referencedKey" Value="SYSPROGRAM_PRIMARY_KEY"/>
+      <Attr Name="_isForeign" Value="true"/>
+      <Attr Name="_DBObjectName" Value="FK_SYS_USERS_DETAIL"/>
+    </DesignTime>
+    <AttrArray Name="Attributes">
+      <Item Value="erpsoltemp.erpsoltempmodel.erpsoltempeo.SysUsersDetail.Moduleid"/>
     </AttrArray>
   </Key>
 </Entity>

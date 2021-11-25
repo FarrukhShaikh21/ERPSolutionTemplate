@@ -159,4 +159,10 @@
     EntityAttrName="Approval2"
     EntityUsage="SysUsersDetail"
     AliasName="APPROVAL_2"/>
+  <ViewLinkAccessor
+    Name="SysProgramView"
+    ViewLink="erpsoltemp.erpsoltempmodel.erpsoltemplink.SysProgramSysUsersDetailModuleIDLink"
+    Type="oracle.jbo.Row"
+    Reversed="true"
+    IsUpdateable="false"/>
 </ViewObject>

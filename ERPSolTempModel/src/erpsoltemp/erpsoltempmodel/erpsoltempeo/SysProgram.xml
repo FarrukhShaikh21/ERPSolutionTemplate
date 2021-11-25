@@ -258,6 +258,13 @@
     AssociationOtherEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysProgramModuleParentAssoc.SysProgram1"
     Type="oracle.jbo.server.EntityImpl"
     IsUpdateable="true"/>
+  <AccessorAttribute
+    Name="SysUsersDetail"
+    Association="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysUsersDetailModuleIDAssoc"
+    AssociationEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysUsersDetailModuleIDAssoc.SysUsersDetail"
+    AssociationOtherEnd="erpsoltemp.erpsoltempmodel.erpsoltempassoc.SysProgramSysUsersDetailModuleIDAssoc.SysProgram"
+    Type="oracle.jbo.RowIterator"
+    IsUpdateable="false"/>
   <Key
     Name="SysprogramPrimaryKey"
     PrimaryKey="true">
