@@ -16,16 +16,9 @@
     <ViewCriteriaUsage
       Name="SysProgramViewByLevelVC"
       FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
-    <ParameterMap>
-      <PIMap Variable="P_ADF_PROJECTID">
-        <TransientExpression
-          trustMode="untrusted"><![CDATA["SO"]]></TransientExpression>
-      </PIMap>
-      <PIMap Variable="P_ADF_LEVELID">
-        <TransientExpression
-          trustMode="untrusted"><![CDATA["TRANSACTION"]]></TransientExpression>
-      </PIMap>
-    </ParameterMap>
+    <ViewCriteriaUsage
+      Name="SysProgramViewByUsersVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByUsersVC"/>
   </ViewUsage>
   <ViewUsage
     Name="SysProgramReportRO"
@@ -39,6 +32,9 @@
     <ViewCriteriaUsage
       Name="SysProgramViewByLevelVC"
       FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramViewByUsersVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByUsersVC"/>
     <ParameterMap>
       <PIMap Variable="P_ADF_PROJECTID">
         <TransientExpression
