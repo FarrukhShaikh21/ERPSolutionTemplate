@@ -43,6 +43,8 @@
                                                                   to="#{pageFlowScope.ERPSolTempBean.LERPSolModuleId}"/>
                                             <af:setActionListener from="#{row.ExecName}"
                                                                   to="#{pageFlowScope.ERPSolTempBean.LERPSolActionRuntime}"/>
+                                            <af:setActionListener from="#{row.ModuleName}"
+                                                                  to="#{pageFlowScope.ERPSolTempBean.LERPSolActivityName}"/>
                                         </af:link>
                                     </af:column>
                                     <af:column sortProperty="#{bindings.SysProgramMasterRO.hints.Moduleid.name}"
@@ -84,6 +86,8 @@
                                                                   to="#{pageFlowScope.ERPSolTempBean.LERPSolModuleId}"/>
                                             <af:setActionListener from="#{row.ExecName}"
                                                                   to="#{pageFlowScope.ERPSolTempBean.LERPSolActionRuntime}"/>
+                                            <af:setActionListener from="#{row.ModuleName}"
+                                                                  to="#{pageFlowScope.ERPSolTempBean.LERPSolActivityName}"/>
                                         </af:link>
                                         <af:outputText value="#{row.ModuleName}"
                                                        shortDesc="#{bindings.SysProgramTransactionRO.hints.ModuleName.tooltip}"
@@ -127,11 +131,16 @@
                     <af:gridCell marginStart="5px" width="25%" id="pt_gc2">
                         <af:spacer width="10" height="10" id="pt_s1"/>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="25%" id="pt_gc3">
-                        <af:spacer width="10" height="10" id="pt_s2"/>
+                    <af:gridCell marginStart="5px" width="25%" id="pt_gc3" halign="center" valign="middle">
+                        <af:outputText value="#{pageFlowScope.ERPSolTempBean.LERPSolActivityName}" id="pt_ot5"
+                                       inlineStyle="font-weight:bold;color:blue;font-size:large"/>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="25%" marginEnd="0px" id="pt_gc4">
-                        <af:spacer width="10" height="10" id="pt_s3"/>
+                    <af:gridCell marginStart="5px" width="25%" marginEnd="0px" id="pt_gc4" halign="stretch">
+                        <af:panelGroupLayout id="pt_pgl2" layout="horizontal" halign="end">
+                            <af:link text="Logout" id="pt_l3" icon="#{resource['images:imgLogout.png']}"
+                                     iconPosition="top" action="#{pageFlowScope.ERPSolTempBean.doERPLogOutApp}"/>
+                            <af:spacer width="10" height="10" id="pt_s2"/>
+                        </af:panelGroupLayout>
                     </af:gridCell>
                 </af:gridRow>
             </af:panelGridLayout>

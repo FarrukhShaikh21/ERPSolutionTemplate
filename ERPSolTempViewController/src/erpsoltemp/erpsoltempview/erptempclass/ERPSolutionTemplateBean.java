@@ -27,6 +27,10 @@ public class ERPSolutionTemplateBean {
     private String lERPSolAllowPrint;
     private String lERPSolHLevel;
     private String lERPSolModuleId;//MODULE_ACTION id from SYS_PROGRAM
+    private String lERPSolUserCode;
+    private String lERPSolLocationCode;
+    private String lERPSolStoreId;
+    private String lERPSolRegionId;
   
     public ERPSolutionTemplateBean() {
         super();
@@ -263,5 +267,42 @@ public class ERPSolutionTemplateBean {
     System.out.println("lErpActivityRuntime"+ "ERP-ACT-"+lERPSolActionRuntime);
     return "ERP-ACT-"+lERPSolActionRuntime;
     }
-    
+
+
+    public void setLERPSolUserCode(String lERPSolUserCode) {
+        this.lERPSolUserCode = lERPSolUserCode;
+    }
+
+    public String getLERPSolUserCode() {
+        
+        return ERPSolGlobClassModel.doGetUserCode();
+    }
+
+    public void setLERPSolLocationCode(String lERPSolLocationCode) {
+        this.lERPSolLocationCode = lERPSolLocationCode;
+    }
+
+    public String getLERPSolLocationCode() {
+        return ERPSolGlobClassModel.doGetUserLocationCode();
+    }
+
+    public void setLERPSolStoreId(String lERPSolStoreId) {
+        this.lERPSolStoreId = lERPSolStoreId;
+    }
+
+    public String getLERPSolStoreId() {
+        return  ERPSolGlobClassModel.doGetUserStoreCode();
+    }
+
+    public void setLERPSolRegionId(String lERPSolRegionId) {
+        this.lERPSolRegionId = lERPSolRegionId;
+    }
+
+    public String getLERPSolRegionId() {
+        return  ERPSolGlobClassModel.doGetUserRegionCode();
+    }
+    public String doERPLogOutApp() {
+        return "ACT-ERP-SOL-LOGOUT";
+    }
+
 }
