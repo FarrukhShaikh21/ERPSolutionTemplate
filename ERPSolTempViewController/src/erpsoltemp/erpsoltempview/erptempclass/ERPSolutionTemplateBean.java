@@ -31,6 +31,7 @@ public class ERPSolutionTemplateBean {
     private String lERPSolLocationCode;
     private String lERPSolStoreId;
     private String lERPSolRegionId;
+    private String lERPShowMenu="ERPSOLYES";
   
     public ERPSolutionTemplateBean() {
         super();
@@ -275,7 +276,12 @@ public class ERPSolutionTemplateBean {
 
     public String getLERPSolUserCode() {
         
-        return ERPSolGlobClassModel.doGetUserCode();
+        try {
+            return ERPSolGlobClassModel.doGetUserCode();
+        } catch (NullPointerException e) {
+            // TODO: Add catch code
+            return "ORACLE";
+        }
     }
 
     public void setLERPSolLocationCode(String lERPSolLocationCode) {
@@ -303,6 +309,18 @@ public class ERPSolutionTemplateBean {
     }
     public String doERPLogOutApp() {
         return "ACT-ERP-SOL-LOGOUT";
+    }
+
+    public void setLERPShowMenu(String lERPShowMenu) {
+        this.lERPShowMenu = lERPShowMenu;
+    }
+
+    public String getLERPShowMenu() {
+        return lERPShowMenu;
+    }
+    
+    public void doERPSolSetMenuOff(){
+        setLERPShowMenu("NO");
     }
 
 }

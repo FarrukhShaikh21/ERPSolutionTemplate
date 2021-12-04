@@ -17,7 +17,8 @@
         <f:facet name="center">
             <af:panelSplitter id="pt_ps1" splitterPosition="250" dimensionsFrom="parent">
                 <f:facet name="first">
-                    <af:panelBox text="Application Menu" id="pt_pb1" showDisclosure="false">
+                    <af:panelBox text="Application Menu" id="pt_pb1" showDisclosure="false"
+                                 visible="#{pageFlowScope.ERPSolTempBean.LERPShowMenu=='ERPSOLYES'}">
                         <f:facet name="toolbar"/>
                         <af:panelAccordion discloseMany="false" id="pt_pa1">
                             <af:showDetailItem id="pane1" text="Master" disclosed="true">
@@ -137,6 +138,10 @@
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="25%" marginEnd="0px" id="pt_gc4" halign="stretch">
                         <af:panelGroupLayout id="pt_pgl2" layout="horizontal" halign="end">
+                            <af:link text="#{pageFlowScope.ERPSolTempBean.LERPSolUserCode}" id="pt_l4"
+                                     icon="/erpsoltempletservlet?erpsolfilename=#{pageFlowScope.ERPSolTempBean.LERPSolUserCode}"
+                                     iconPosition="top" disabled="true"/>
+                            <af:spacer width="10" height="10" id="pt_s3"/>
                             <af:link text="Logout" id="pt_l3" icon="#{resource['images:imgLogout.png']}"
                                      iconPosition="top" action="#{pageFlowScope.ERPSolTempBean.doERPLogOutApp}"/>
                             <af:spacer width="10" height="10" id="pt_s2"/>
@@ -146,4 +151,5 @@
             </af:panelGridLayout>
         </f:facet>
     </af:decorativeBox>
+    
 </af:pageTemplateDef>
