@@ -125,18 +125,15 @@
         <f:facet name="top">
             <af:panelGridLayout id="pt_pgl1" inlineStyle="background-color:#f7f7f7">
                 <af:gridRow marginTop="5px" marginBottom="15px" id="pt_gr1">
-                    <af:gridCell marginStart="0px" width="10%" id="pt_gc1">
+                    <af:gridCell marginStart="0px" width="10%" id="pt_gc1" halign="stretch">
                         <af:image source="#{resource['images:imgTheCompanyLogo.png']}" id="pt_i1" styleClass="AFStretchWidth" imageMapType="server"
                                   inlineStyle="height:70px"/>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="25%" id="pt_gc2">
-                        <af:spacer width="10" height="10" id="pt_s1"/>
+                    <af:gridCell marginStart="5px" width="45%" id="pt_gc3" halign="end" valign="middle">
+                        <af:outputText value="#{pageFlowScope.ERPSolTempBean.LERPShowMenu=='ERPSOLNO'?'MODULES': pageFlowScope.ERPSolTempBean.LERPSolActivityName}" id="pt_ot5"
+                                       inlineStyle="font-weight:bold;color:blue;font-size:large" truncateAt="0"/>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="25%" id="pt_gc3" halign="center" valign="middle">
-                        <af:outputText value="#{pageFlowScope.ERPSolTempBean.LERPSolActivityName}" id="pt_ot5"
-                                       inlineStyle="font-weight:bold;color:blue;font-size:large"/>
-                    </af:gridCell>
-                    <af:gridCell marginStart="5px" width="25%" marginEnd="0px" id="pt_gc4" halign="stretch">
+                    <af:gridCell marginStart="5px" width="45%" marginEnd="0px" id="pt_gc4" halign="stretch">
                         <af:panelGroupLayout id="pt_pgl2" layout="horizontal" halign="end">
                             <af:link text="#{pageFlowScope.ERPSolTempBean.LERPSolUserCode}" id="pt_l4"
                                      icon="/erpsoltempletservlet?erpsolfilename=#{pageFlowScope.ERPSolTempBean.LERPSolUserCode}"
