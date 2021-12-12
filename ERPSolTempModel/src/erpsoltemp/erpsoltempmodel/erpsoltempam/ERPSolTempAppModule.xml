@@ -22,7 +22,17 @@
   </ViewUsage>
   <ViewUsage
     Name="SysProgramReportRO"
-    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView">
+    <ViewCriteriaUsage
+      Name="SysProgramByProjectVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramByProjectVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramModuleTypeVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramModuleTypeVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramViewByLevelVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
+  </ViewUsage>
   <ViewUsage
     Name="SysProgramMasterRO"
     ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView">
@@ -49,4 +59,17 @@
   <ViewUsage
     Name="SysProgramReverseRO"
     ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+  <ViewUsage
+    Name="SysProgramDetRO"
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView">
+    <ViewCriteriaUsage
+      Name="SysProgramViewByUsersVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByUsersVC"/>
+  </ViewUsage>
+  <ViewLinkUsage
+    Name="SysProgramSysProgramModuleParentLink1"
+    ViewLinkObjectName="erpsoltemp.erpsoltempmodel.erpsoltemplink.SysProgramSysProgramModuleParentLink"
+    SrcViewUsageName="erpsoltemp.erpsoltempmodel.erpsoltempam.ERPSolTempAppModule.SysProgramReportRO"
+    DstViewUsageName="erpsoltemp.erpsoltempmodel.erpsoltempam.ERPSolTempAppModule.SysProgramDetRO"
+    Reversed="false"/>
 </AppModule>
