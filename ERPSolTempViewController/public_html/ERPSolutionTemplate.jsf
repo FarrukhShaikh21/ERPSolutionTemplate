@@ -79,7 +79,7 @@
                                           autoHeightRows="29" scrollPolicy="page">
                                     <af:column sortProperty="#{bindings.SysProgramTransactionRO.hints.ModuleName.name}"
                                                filterable="true"
-                                               headerText="#{bindings.SysProgramTransactionRO.hints.ModuleName.label}"
+                                               headerText=" "
                                                id="pt_c5">
                                         <af:link text="#{row.ModuleName}" id="pt_l2" partialSubmit="true"
                                                  action="#{pageFlowScope.ERPSolTempBean.doERPSolGotoActivity}">
@@ -112,7 +112,71 @@
                                     </af:column>
                                 </af:table>
                             </af:showDetailItem>
-                            <af:showDetailItem id="pane3" text="Reports"/>
+                            <af:showDetailItem id="pane3" text="Reports">
+                                <af:table value="#{bindings.SysProgramReportRO.collectionModel}" var="row"
+                                          rows="#{bindings.SysProgramReportRO.rangeSize}"
+                                          emptyText="#{bindings.SysProgramReportRO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.SysProgramReportRO.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.SysProgramReportRO.collectionModel.makeCurrent}"
+                                          rowSelection="single" fetchSize="#{bindings.SysProgramReportRO.rangeSize}"
+                                          filterModel="#{bindings.SysProgramReportROQuery.queryDescriptor}"
+                                          queryListener="#{bindings.SysProgramReportROQuery.processQuery}"
+                                          filterVisible="true" varStatus="vs" id="pt_t3" columnStretching="last">
+                                    <af:column sortProperty="#{bindings.SysProgramReportRO.hints.Moduleid.name}"
+                                               filterable="true"
+                                               headerText="#{bindings.SysProgramReportRO.hints.Moduleid.label}"
+                                               id="pt_c7" rendered="false">
+                                        <af:inputText value="#{row.bindings.Moduleid.inputValue}"
+                                                      label="#{bindings.SysProgramReportRO.hints.Moduleid.label}"
+                                                      required="#{bindings.SysProgramReportRO.hints.Moduleid.mandatory}"
+                                                      columns="#{bindings.SysProgramReportRO.hints.Moduleid.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReportRO.hints.Moduleid.precision}"
+                                                      shortDesc="#{bindings.SysProgramReportRO.hints.Moduleid.tooltip}"
+                                                      id="pt_it1">
+                                            <f:validator binding="#{row.bindings.Moduleid.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.SysProgramReportRO.hints.ModuleName.name}"
+                                               filterable="true"
+                                               headerText=" "
+                                               id="pt_c8">
+                                        <af:inputText value="#{row.bindings.ModuleName.inputValue}"
+                                                      label="#{bindings.SysProgramReportRO.hints.ModuleName.label}"
+                                                      required="#{bindings.SysProgramReportRO.hints.ModuleName.mandatory}"
+                                                      columns="#{bindings.SysProgramReportRO.hints.ModuleName.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReportRO.hints.ModuleName.precision}"
+                                                      shortDesc="#{bindings.SysProgramReportRO.hints.ModuleName.tooltip}"
+                                                      id="pt_it2" rendered="false">
+                                            <f:validator binding="#{row.bindings.ModuleName.validator}"/>
+                                        </af:inputText>
+                                        <af:link text="#{row.bindings.ModuleName.inputValue}" id="pt_l5"
+                                                 partialSubmit="true"
+                                                 action="#{pageFlowScope.ERPSolTempBean.doERPSolGotoActivity}">
+                                            <af:setActionListener to="#{pageFlowScope.ERPSolTempBean.LERPSolModuleId}"
+                                                                  from="#{row.bindings.Moduleid.inputValue}"/>
+                                            <af:setActionListener from="#{row.bindings.ExecName.inputValue}"
+                                                                  to="#{pageFlowScope.ERPSolTempBean.LERPSolActionRuntime}"/>
+                                            <af:setActionListener from="#{row.bindings.ModuleName.inputValue}"
+                                                                  to="#{pageFlowScope.ERPSolTempBean.LERPSolActivityName}"/>
+                                        </af:link>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.SysProgramReportRO.hints.ExecName.name}"
+                                               filterable="true"
+                                               headerText="#{bindings.SysProgramReportRO.hints.ExecName.label}"
+                                               id="pt_c9" rendered="false">
+                                        <af:inputText value="#{row.bindings.ExecName.inputValue}"
+                                                      label="#{bindings.SysProgramReportRO.hints.ExecName.label}"
+                                                      required="#{bindings.SysProgramReportRO.hints.ExecName.mandatory}"
+                                                      columns="#{bindings.SysProgramReportRO.hints.ExecName.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReportRO.hints.ExecName.precision}"
+                                                      shortDesc="#{bindings.SysProgramReportRO.hints.ExecName.tooltip}"
+                                                      id="pt_it3">
+                                            <f:validator binding="#{row.bindings.ExecName.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                </af:table>
+                            </af:showDetailItem>
                             <af:showDetailItem id="pane4" text="Reverse Transaction"/>
                         </af:panelAccordion>
                     </af:panelBox>

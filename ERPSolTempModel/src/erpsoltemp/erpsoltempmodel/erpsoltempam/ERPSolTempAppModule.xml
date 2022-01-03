@@ -30,6 +30,9 @@
       Name="SysProgramModuleTypeVC"
       FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramModuleTypeVC"/>
     <ViewCriteriaUsage
+      Name="SysProgramNoParentVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramNoParentVC"/>
+    <ViewCriteriaUsage
       Name="SysProgramViewByLevelVC"
       FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
   </ViewUsage>

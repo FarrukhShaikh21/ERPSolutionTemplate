@@ -12,6 +12,10 @@
               id="SysProgramTransactionROIterator"/>
     <searchRegion Binds="SysProgramTransactionROIterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="SysProgramTransactionROQuery"/>
+    <iterator Binds="SysProgramReportRO" RangeSize="25" DataControl="ERPSolTempAppModuleDataControl"
+              id="SysProgramReportROIterator"/>
+    <searchRegion Binds="SysProgramReportROIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="SysProgramReportROQuery"/>
   </executables>
   <bindings>
     <tree IterBinding="SysProgramMasterROIterator" id="SysProgramMasterRO">
@@ -25,6 +29,15 @@
     </tree>
     <tree IterBinding="SysProgramTransactionROIterator" id="SysProgramTransactionRO">
       <nodeDefinition DefName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView" Name="SysProgramTransactionRO0">
+        <AttrNames>
+          <Item Value="Moduleid"/>
+          <Item Value="ModuleName"/>
+          <Item Value="ExecName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SysProgramReportROIterator" id="SysProgramReportRO">
+      <nodeDefinition DefName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView" Name="SysProgramReportRO0">
         <AttrNames>
           <Item Value="Moduleid"/>
           <Item Value="ModuleName"/>
