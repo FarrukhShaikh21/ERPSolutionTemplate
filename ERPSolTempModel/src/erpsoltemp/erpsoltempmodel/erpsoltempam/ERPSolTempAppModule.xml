@@ -61,7 +61,14 @@
   </ViewUsage>
   <ViewUsage
     Name="SysProgramReverseRO"
-    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"/>
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView">
+    <ViewCriteriaUsage
+      Name="SysProgramByProjectVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramByProjectVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramViewByLevelVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
+  </ViewUsage>
   <ViewUsage
     Name="SysProgramDetRO"
     ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView">
