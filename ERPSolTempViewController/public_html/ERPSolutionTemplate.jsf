@@ -177,7 +177,97 @@
                                     </af:column>
                                 </af:table>
                             </af:showDetailItem>
-                            <af:showDetailItem id="pane4" text="Reverse Transaction"/>
+                            <af:showDetailItem id="pane4" text="Reverse Transaction">
+                                <af:table value="#{bindings.SysProgramReverseRO.collectionModel}" var="row"
+                                          rows="#{bindings.SysProgramReverseRO.rangeSize}"
+                                          emptyText="#{bindings.SysProgramReverseRO.viewable ? 'No data to display.' : 'Access Denied.'}"
+                                          rowBandingInterval="0"
+                                          selectedRowKeys="#{bindings.SysProgramReverseRO.collectionModel.selectedRow}"
+                                          selectionListener="#{bindings.SysProgramReverseRO.collectionModel.makeCurrent}"
+                                          rowSelection="single" fetchSize="#{bindings.SysProgramReverseRO.rangeSize}"
+                                          filterModel="#{bindings.SysProgramReverseROQuery.queryDescriptor}"
+                                          queryListener="#{bindings.SysProgramReverseROQuery.processQuery}"
+                                          filterVisible="true" varStatus="vs" id="pt_t4" columnStretching="last">
+                                    <af:column sortProperty="#{bindings.SysProgramReverseRO.hints.Moduleid.name}"
+                                               filterable="true"
+                                               headerText="#{bindings.SysProgramReverseRO.hints.Moduleid.label}"
+                                               id="pt_c10" rendered="false">
+                                        <af:inputText value="#{row.bindings.Moduleid.inputValue}"
+                                                      label="#{bindings.SysProgramReverseRO.hints.Moduleid.label}"
+                                                      required="#{bindings.SysProgramReverseRO.hints.Moduleid.mandatory}"
+                                                      columns="#{bindings.SysProgramReverseRO.hints.Moduleid.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReverseRO.hints.Moduleid.precision}"
+                                                      shortDesc="#{bindings.SysProgramReverseRO.hints.Moduleid.tooltip}"
+                                                      id="pt_it4">
+                                            <f:validator binding="#{row.bindings.Moduleid.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.SysProgramReverseRO.hints.Levelid.name}"
+                                               filterable="true"
+                                               headerText="#{bindings.SysProgramReverseRO.hints.Levelid.label}"
+                                               id="pt_c11" rendered="false">
+                                        <af:inputText value="#{row.bindings.Levelid.inputValue}"
+                                                      label="#{bindings.SysProgramReverseRO.hints.Levelid.label}"
+                                                      required="#{bindings.SysProgramReverseRO.hints.Levelid.mandatory}"
+                                                      columns="#{bindings.SysProgramReverseRO.hints.Levelid.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReverseRO.hints.Levelid.precision}"
+                                                      shortDesc="#{bindings.SysProgramReverseRO.hints.Levelid.tooltip}"
+                                                      id="pt_it5">
+                                            <f:validator binding="#{row.bindings.Levelid.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.SysProgramReverseRO.hints.ModuleName.name}"
+                                               filterable="true"
+                                               id="pt_c12">
+                                        <af:link text="#{row.bindings.ModuleName.inputValue}" id="pt_l6" partialSubmit="true"
+                                                 action="#{pageFlowScope.ERPSolTempBean.doERPSolGotoActivity}">
+                                            <af:setActionListener from="#{row.bindings.Moduleid.inputValue}"
+                                                                  to="#{pageFlowScope.ERPSolTempBean.LERPSolModuleId}"/>
+                                            <af:setActionListener to="#{pageFlowScope.ERPSolTempBean.LERPSolActionRuntime}"
+                                                                  from="#{row.bindings.ExecName.inputValue}"/>
+                                            <af:setActionListener from="#{row.bindings.ModuleName.inputValue}"
+                                                                  to="#{pageFlowScope.ERPSolTempBean.LERPSolActivityName}"/>
+                                        </af:link>
+                                        <af:inputText value="#{row.bindings.ModuleName.inputValue}"
+                                                      label="#{bindings.SysProgramReverseRO.hints.ModuleName.label}"
+                                                      required="#{bindings.SysProgramReverseRO.hints.ModuleName.mandatory}"
+                                                      columns="#{bindings.SysProgramReverseRO.hints.ModuleName.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReverseRO.hints.ModuleName.precision}"
+                                                      shortDesc="#{bindings.SysProgramReverseRO.hints.ModuleName.tooltip}"
+                                                      id="pt_it6" contentStyle="width:100%" rendered="false">
+                                            <f:validator binding="#{row.bindings.ModuleName.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.SysProgramReverseRO.hints.ModuleType.name}"
+                                               filterable="true"
+                                               headerText="#{bindings.SysProgramReverseRO.hints.ModuleType.label}"
+                                               id="pt_c13" rendered="false">
+                                        <af:inputText value="#{row.bindings.ModuleType.inputValue}"
+                                                      label="#{bindings.SysProgramReverseRO.hints.ModuleType.label}"
+                                                      required="#{bindings.SysProgramReverseRO.hints.ModuleType.mandatory}"
+                                                      columns="#{bindings.SysProgramReverseRO.hints.ModuleType.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReverseRO.hints.ModuleType.precision}"
+                                                      shortDesc="#{bindings.SysProgramReverseRO.hints.ModuleType.tooltip}"
+                                                      id="pt_it7">
+                                            <f:validator binding="#{row.bindings.ModuleType.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                    <af:column sortProperty="#{bindings.SysProgramReverseRO.hints.ExecName.name}"
+                                               filterable="true"
+                                               headerText="#{bindings.SysProgramReverseRO.hints.ExecName.label}"
+                                               id="pt_c14" rendered="false">
+                                        <af:inputText value="#{row.bindings.ExecName.inputValue}"
+                                                      label="#{bindings.SysProgramReverseRO.hints.ExecName.label}"
+                                                      required="#{bindings.SysProgramReverseRO.hints.ExecName.mandatory}"
+                                                      columns="#{bindings.SysProgramReverseRO.hints.ExecName.displayWidth}"
+                                                      maximumLength="#{bindings.SysProgramReverseRO.hints.ExecName.precision}"
+                                                      shortDesc="#{bindings.SysProgramReverseRO.hints.ExecName.tooltip}"
+                                                      id="pt_it8">
+                                            <f:validator binding="#{row.bindings.ExecName.validator}"/>
+                                        </af:inputText>
+                                    </af:column>
+                                </af:table>
+                            </af:showDetailItem>
                         </af:panelAccordion>
                     </af:panelBox>
                 </f:facet>

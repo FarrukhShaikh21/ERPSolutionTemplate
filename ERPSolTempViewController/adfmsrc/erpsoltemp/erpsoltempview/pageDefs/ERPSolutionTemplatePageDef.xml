@@ -16,6 +16,10 @@
               id="SysProgramReportROIterator"/>
     <searchRegion Binds="SysProgramReportROIterator" Criteria=""
                   Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="SysProgramReportROQuery"/>
+    <iterator Binds="SysProgramReverseRO" RangeSize="25" DataControl="ERPSolTempAppModuleDataControl"
+              id="SysProgramReverseROIterator"/>
+    <searchRegion Binds="SysProgramReverseROIterator" Criteria=""
+                  Customizer="oracle.jbo.uicli.binding.JUSearchBindingCustomizer" id="SysProgramReverseROQuery"/>
   </executables>
   <bindings>
     <tree IterBinding="SysProgramMasterROIterator" id="SysProgramMasterRO">
@@ -41,6 +45,17 @@
         <AttrNames>
           <Item Value="Moduleid"/>
           <Item Value="ModuleName"/>
+          <Item Value="ExecName"/>
+        </AttrNames>
+      </nodeDefinition>
+    </tree>
+    <tree IterBinding="SysProgramReverseROIterator" id="SysProgramReverseRO">
+      <nodeDefinition DefName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView" Name="SysProgramReverseRO0">
+        <AttrNames>
+          <Item Value="Moduleid"/>
+          <Item Value="Levelid"/>
+          <Item Value="ModuleName"/>
+          <Item Value="ModuleType"/>
           <Item Value="ExecName"/>
         </AttrNames>
       </nodeDefinition>

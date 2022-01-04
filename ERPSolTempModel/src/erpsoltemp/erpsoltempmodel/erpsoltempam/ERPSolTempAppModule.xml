@@ -68,6 +68,9 @@
     <ViewCriteriaUsage
       Name="SysProgramViewByLevelVC"
       FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByLevelVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramViewByUsersVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByUsersVC"/>
   </ViewUsage>
   <ViewUsage
     Name="SysProgramDetRO"
