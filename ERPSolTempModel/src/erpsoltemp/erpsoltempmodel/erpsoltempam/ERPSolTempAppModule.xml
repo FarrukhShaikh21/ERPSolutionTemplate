@@ -48,16 +48,6 @@
     <ViewCriteriaUsage
       Name="SysProgramViewByUsersVC"
       FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByUsersVC"/>
-    <ParameterMap>
-      <PIMap Variable="P_ADF_PROJECTID">
-        <TransientExpression
-          trustMode="untrusted"><![CDATA["SO"]]></TransientExpression>
-      </PIMap>
-      <PIMap Variable="P_ADF_LEVELID">
-        <TransientExpression
-          trustMode="untrusted"><![CDATA["SETUP"]]></TransientExpression>
-      </PIMap>
-    </ParameterMap>
   </ViewUsage>
   <ViewUsage
     Name="SysProgramReverseRO"
