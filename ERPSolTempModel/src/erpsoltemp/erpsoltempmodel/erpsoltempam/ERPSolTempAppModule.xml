@@ -22,6 +22,9 @@
     <ViewCriteriaUsage
       Name="SysProgramViewByUsersVC"
       FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewByUsersVC"/>
+    <ViewCriteriaUsage
+      Name="SysProgramViewFormModuletypeVC"
+      FullName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView.SysProgramViewFormModuletypeVC"/>
   </ViewUsage>
   <ViewUsage
     Name="SysProgramReportRO"

@@ -361,7 +361,42 @@
         ViewAttribute="Parentid"
         Operator="ISBLANK"
         Conjunction="AND"
-        Value=""
+        UpperColumns="0"
+        Required="Optional"/>
+    </ViewCriteriaRow>
+  </ViewCriteria>
+  <ViewCriteria
+    Name="SysProgramViewFormModuletypeVC"
+    ViewObjectName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView"
+    Conjunction="AND">
+    <Properties>
+      <CustomProperties>
+        <Property
+          Name="displayOperators"
+          Value="InAdvancedMode"/>
+        <Property
+          Name="autoExecute"
+          Value="false"/>
+        <Property
+          Name="allowConjunctionOverride"
+          Value="true"/>
+        <Property
+          Name="showInList"
+          Value="true"/>
+        <Property
+          Name="mode"
+          Value="Basic"/>
+      </CustomProperties>
+    </Properties>
+    <ViewCriteriaRow
+      Name="SysProgramViewCriteria_row_0"
+      UpperColumns="1">
+      <ViewCriteriaItem
+        Name="ModuleType"
+        ViewAttribute="ModuleType"
+        Operator="="
+        Conjunction="AND"
+        Value="F"
         UpperColumns="0"
         Required="Optional"/>
     </ViewCriteriaRow>

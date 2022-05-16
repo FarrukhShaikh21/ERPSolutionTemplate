@@ -278,10 +278,10 @@
         </f:facet>
         <f:facet name="top">
             <af:panelGridLayout id="pt_pgl1" inlineStyle="background-color:#f7f7f7">
-                <af:gridRow marginTop="5px" marginBottom="15px" id="pt_gr1">
-                    <af:gridCell marginStart="0px" width="15%" id="pt_gc1" halign="stretch">
-                        <af:image id="pt_i1" styleClass="AFStretchWidth" source="#{resource['images:imgHAWKERPLogo.png']}"
-                                  inlineStyle="height:70px"/>
+                <af:gridRow id="pt_gr1" height="100%">
+                    <af:gridCell marginStart="0px" width="15%" id="pt_gc1" valign="stretch" halign="stretch">
+                        <af:image id="pt_i1" styleClass="AFStretchWidth"
+                                  source="#{resource['images:imgHawkLeftLogo.png']}"/>
                     </af:gridCell>
                     <af:gridCell marginStart="5px" width="45%" id="pt_gc3" halign="end" valign="middle">
                         <af:outputText value="#{pageFlowScope.ERPSolTempBean.LERPShowMenu=='ERPSOLNO'?'MODULES': pageFlowScope.ERPSolTempBean.LERPSolActivityName}" id="pt_ot5"
