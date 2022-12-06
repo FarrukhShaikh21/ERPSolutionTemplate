@@ -14,6 +14,9 @@ import oracle.jbo.ApplicationModule;
 import oracle.jbo.JboException;
 import oracle.jbo.ViewObject;
 
+import org.apache.myfaces.trinidad.render.ExtendedRenderKitService;
+import org.apache.myfaces.trinidad.util.Service;
+
 public class ERPSolutionTemplateBean {
     private String lERPSolActivityName;
     private String lERPSolActionRuntime;//runtime activite name, this will be opened
@@ -32,7 +35,8 @@ public class ERPSolutionTemplateBean {
     private String lERPSolStoreId;
     private String lERPSolRegionId;
     private String lERPShowMenu="ERPSOLYES";
-  
+    private String lERPSolProjectId;
+    private String pERPUrl;
     public ERPSolutionTemplateBean() {
         super();
     }
@@ -145,6 +149,15 @@ public class ERPSolutionTemplateBean {
             e.printStackTrace();
         }
         doSetErpActivityRights(this.lERPSolModuleId);
+        try {
+            if (lERPSolActionRuntime.toUpperCase().contains(".FMX")) {
+                doErpSolOpenNewTab(pERPUrl);
+                return null;
+            }
+        } catch (Exception e) {
+            // TODO: Add catch code
+            e.printStackTrace();
+        }
         return "ACTStartERPSolutionTaskFlow";
     }
   
@@ -167,20 +180,6 @@ public class ERPSolutionTemplateBean {
         }
         System.out.println("this-is-doGetTransActivity-E");
         
-        System.out.println(  "SELECT NVL(A.CANADD,'N') ALLOW_ADD," +/*0*/
-                                         "NVL(A.CANDELETE,'N') ALLOW_DELETE," +/*1*/
-                                         "NVL(A.RESTRICT_ACCESS,'Y') IS_ALLOW," +/*2*/
-                                         "NVL(A.CANEDIT,'N') ALLOW_EDIT," + /*3*/
-                                         "NVL(A.SUBMIT,'N') ALLOW_SUPERVISE ," +/*4*/
-                                         "NVL(A.UNSUBMIT,'N') ALLOW_UNSUPERVISE," +/*5*/
-                                         "NVL(A.PRINT,'N') ALLOW_PRINT, " +/*6*/
-                                         "NVL(A.H_LEVEL,'U') H_LEVEL " +/*7*/
-                                         
-                                         "FROM SYS_USERS_DETAIL A "+
-                                         "WHERE USERID='"+ERPSolGlobClassModel.doGetUserCode()+"'" +
-                                        // "WHERE USERID='"+"ORACLE"+"'" +
-                                         " AND A.RESTRICT_ACCESS='N' " +
-                                         " AND MODULEID='"+getLERPSolModuleId()+"'");
         System.out.println("temp-1");
 //        System.out.println(lERPModuleAction+ "lERPModuleAction");
 //        System.out.println("SELECT MAX(A.ALLOW_ADD) ALLOW_ADD,MAX(A.ALLOW_DELETE) ALLOW_DELETE,MAX(A.ACTION_RUNTIME) ACTION_RUNTIME,MAX(A.IS_ALLOW) IS_ALLOW,MAX(A.ALLOW_EDIT) ALLOW_EDIT,MAX(A.ALLOW_SUPERVISE) ALLOW_SUPERVISE ,MAX(A.ALLOW_UNSUPERVISE) ALLOW_UNSUPERVISE,MAX(A.ALLOW_CANCEL) ALLOW_CANCEL, MAX(A.ALLOW_EDIT_OTHER) ALLOW_EDIT_OTHER, MAX(A.ALLOW_PRINT) ALLOW_PRINT,MAX(A.SCAN_FILE) SCAN_FILE   FROM sys_users_detail A WHERE USERID='"+ERPGlobalsClass.doGetUserSno()+"-"+lERPSolModuleId+"'");
@@ -193,7 +192,8 @@ public class ERPSolutionTemplateBean {
                                          "NVL(A.SUBMIT,'N') ALLOW_SUPERVISE ," +/*4*/
                                          "NVL(A.UNSUBMIT,'N') ALLOW_UNSUPERVISE," +/*5*/
                                          "NVL(A.PRINT,'N') ALLOW_PRINT, " +/*6*/
-                                         "NVL(A.H_LEVEL,'U') H_LEVEL " +/*7*/
+                                         "NVL(A.H_LEVEL,'U') H_LEVEL, " +/*7*/
+                                         "NVL(A.PROJECTID,'-') PROJECTID " +/*8*/
                                          
                                          "FROM SYS_USERS_DETAIL A "+
                                          "WHERE USERID='"+ERPSolGlobClassModel.doGetUserCode()+"'" +
@@ -244,6 +244,7 @@ public class ERPSolutionTemplateBean {
         System.out.println("temp-18");
 
         this.lERPSolHLevel = vo.first().getAttribute(7).toString();
+        this.lERPSolProjectId = vo.first().getAttribute(8).toString();
         System.out.println("temp-19");
         ADFContext.getCurrent().getPageFlowScope().put("GLOB_H_LEVEL",lERPSolHLevel);
         System.out.println("temp-20");
@@ -260,7 +261,25 @@ public class ERPSolutionTemplateBean {
         
         System.out.println("-----------finish-------------------");         
         
-       
+        vo = am.findViewObject("QVOWCP");
+        
+        if (vo != null) {
+            vo.remove();
+        }
+        
+        vo=am.createViewObjectFromQueryStmt("QVOWCP", "select PARAMETER_VALUE FROM so_sales_parameter a where a.Parameter_Id='PAY_FORM_SERVER_URL'");
+        vo.executeQuery();
+        pERPUrl=vo.first().getAttribute(0).toString();
+        vo.remove();
+        vo=am.createViewObjectFromQueryStmt("QVOWCP", "select PATH PATH FROM SYSTEM a where a.PROJECTID='"+lERPSolProjectId+"' ");
+        vo.executeQuery();
+        String PFormURL=vo.first().getAttribute(0).toString()+"FORMS\\\\";
+        System.out.println("PFormURL"+PFormURL);
+        PFormURL=PFormURL+lERPSolActionRuntime;
+        pERPUrl=pERPUrl.replace("<P_FORM_NAME>", PFormURL);
+        pERPUrl=pERPUrl.replace("<P_USERID>", ERPSolGlobClassModel.doGetUserCode());
+        System.out.println("pERPUrl"+pERPUrl);
+        
     }
 
 
@@ -323,4 +342,18 @@ public class ERPSolutionTemplateBean {
         setLERPShowMenu("NO");
     }
 
+    public void setLERPSolProjectId(String lERPSolProjectId) {
+        this.lERPSolProjectId = lERPSolProjectId;
+    }
+
+    public String getLERPSolProjectId() {
+        return lERPSolProjectId;
+    }
+
+    public void doErpSolOpenNewTab(String url) {
+    ExtendedRenderKitService erks =
+    Service.getRenderKitService(FacesContext.getCurrentInstance(), ExtendedRenderKitService.class);
+    StringBuilder strb = new StringBuilder("window.open('" + url + "');");
+    erks.addScript(FacesContext.getCurrentInstance(), strb.toString());
+    }
 }
