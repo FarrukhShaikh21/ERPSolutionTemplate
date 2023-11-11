@@ -5,21 +5,6 @@
   <executables>
     <variableIterator id="variables"/>
     <page path="erpsoltemp.erpsoltempview.pageDefs.ERPSolutionTemplatePageDef" id="ptb1" Refresh="ifNeeded"/>
-    <iterator Binds="SysProgramMasterRO" RangeSize="25" DataControl="ERPSolTempAppModuleDataControl"
-              id="SysProgramMasterROIterator"/>
   </executables>
-  <bindings>
-    <tree IterBinding="SysProgramMasterROIterator" id="SysProgramMasterRO">
-      <nodeDefinition DefName="erpsoltemp.erpsoltempmodel.erpsoltempvo.SysProgramView" Name="SysProgramMasterRO0">
-        <AttrNames>
-          <Item Value="ExecName"/>
-          <Item Value="MenuText"/>
-          <Item Value="NoOfDays"/>
-          <Item Value="Typeid"/>
-          <Item Value="Categoryid"/>
-          <Item Value="MenuId"/>
-        </AttrNames>
-      </nodeDefinition>
-    </tree>
-  </bindings>
+  <bindings/>
 </pageDefinition>

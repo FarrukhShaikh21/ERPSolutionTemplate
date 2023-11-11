@@ -5,76 +5,7 @@
     <af:messages id="m1"/>
     <af:form id="f1">
       <af:pageTemplate viewId="/ERPSolutionTemplate.jsf" value="#{bindings.ptb1}" id="pt1">
-        <f:facet name="erptempmain">
-          <af:table value="#{bindings.SysProgramMasterRO.collectionModel}" var="row"
-                    rows="#{bindings.SysProgramMasterRO.rangeSize}"
-                    emptyText="#{bindings.SysProgramMasterRO.viewable ? 'No data to display.' : 'Access Denied.'}"
-                    rowBandingInterval="0" selectedRowKeys="#{bindings.SysProgramMasterRO.collectionModel.selectedRow}"
-                    selectionListener="#{bindings.SysProgramMasterRO.collectionModel.makeCurrent}" rowSelection="single"
-                    fetchSize="#{bindings.SysProgramMasterRO.rangeSize}" id="t1">
-            <af:column headerText="#{bindings.SysProgramMasterRO.hints.ExecName.label}" id="c1">
-              <af:inputText value="#{row.bindings.ExecName.inputValue}"
-                            label="#{bindings.SysProgramMasterRO.hints.ExecName.label}"
-                            required="#{bindings.SysProgramMasterRO.hints.ExecName.mandatory}"
-                            columns="#{bindings.SysProgramMasterRO.hints.ExecName.displayWidth}"
-                            maximumLength="#{bindings.SysProgramMasterRO.hints.ExecName.precision}"
-                            shortDesc="#{bindings.SysProgramMasterRO.hints.ExecName.tooltip}" id="it1">
-                <f:validator binding="#{row.bindings.ExecName.validator}"/>
-              </af:inputText>
-            </af:column>
-            <af:column headerText="#{bindings.SysProgramMasterRO.hints.MenuText.label}" id="c2">
-              <af:inputText value="#{row.bindings.MenuText.inputValue}"
-                            label="#{bindings.SysProgramMasterRO.hints.MenuText.label}"
-                            required="#{bindings.SysProgramMasterRO.hints.MenuText.mandatory}"
-                            columns="#{bindings.SysProgramMasterRO.hints.MenuText.displayWidth}"
-                            maximumLength="#{bindings.SysProgramMasterRO.hints.MenuText.precision}"
-                            shortDesc="#{bindings.SysProgramMasterRO.hints.MenuText.tooltip}" id="it2">
-                <f:validator binding="#{row.bindings.MenuText.validator}"/>
-              </af:inputText>
-            </af:column>
-            <af:column headerText="#{bindings.SysProgramMasterRO.hints.NoOfDays.label}" id="c3">
-              <af:inputText value="#{row.bindings.NoOfDays.inputValue}"
-                            label="#{bindings.SysProgramMasterRO.hints.NoOfDays.label}"
-                            required="#{bindings.SysProgramMasterRO.hints.NoOfDays.mandatory}"
-                            columns="#{bindings.SysProgramMasterRO.hints.NoOfDays.displayWidth}"
-                            maximumLength="#{bindings.SysProgramMasterRO.hints.NoOfDays.precision}"
-                            shortDesc="#{bindings.SysProgramMasterRO.hints.NoOfDays.tooltip}" id="it3">
-                <f:validator binding="#{row.bindings.NoOfDays.validator}"/>
-                <af:convertNumber groupingUsed="false" pattern="#{bindings.SysProgramMasterRO.hints.NoOfDays.format}"/>
-              </af:inputText>
-            </af:column>
-            <af:column headerText="#{bindings.SysProgramMasterRO.hints.Typeid.label}" id="c4">
-              <af:inputText value="#{row.bindings.Typeid.inputValue}"
-                            label="#{bindings.SysProgramMasterRO.hints.Typeid.label}"
-                            required="#{bindings.SysProgramMasterRO.hints.Typeid.mandatory}"
-                            columns="#{bindings.SysProgramMasterRO.hints.Typeid.displayWidth}"
-                            maximumLength="#{bindings.SysProgramMasterRO.hints.Typeid.precision}"
-                            shortDesc="#{bindings.SysProgramMasterRO.hints.Typeid.tooltip}" id="it4">
-                <f:validator binding="#{row.bindings.Typeid.validator}"/>
-              </af:inputText>
-            </af:column>
-            <af:column headerText="#{bindings.SysProgramMasterRO.hints.Categoryid.label}" id="c5">
-              <af:inputText value="#{row.bindings.Categoryid.inputValue}"
-                            label="#{bindings.SysProgramMasterRO.hints.Categoryid.label}"
-                            required="#{bindings.SysProgramMasterRO.hints.Categoryid.mandatory}"
-                            columns="#{bindings.SysProgramMasterRO.hints.Categoryid.displayWidth}"
-                            maximumLength="#{bindings.SysProgramMasterRO.hints.Categoryid.precision}"
-                            shortDesc="#{bindings.SysProgramMasterRO.hints.Categoryid.tooltip}" id="it5">
-                <f:validator binding="#{row.bindings.Categoryid.validator}"/>
-              </af:inputText>
-            </af:column>
-            <af:column headerText="#{bindings.SysProgramMasterRO.hints.MenuId.label}" id="c6">
-              <af:inputText value="#{row.bindings.MenuId.inputValue}"
-                            label="#{bindings.SysProgramMasterRO.hints.MenuId.label}"
-                            required="#{bindings.SysProgramMasterRO.hints.MenuId.mandatory}"
-                            columns="#{bindings.SysProgramMasterRO.hints.MenuId.displayWidth}"
-                            maximumLength="#{bindings.SysProgramMasterRO.hints.MenuId.precision}"
-                            shortDesc="#{bindings.SysProgramMasterRO.hints.MenuId.tooltip}" id="it6">
-                <f:validator binding="#{row.bindings.MenuId.validator}"/>
-              </af:inputText>
-            </af:column>
-          </af:table>
-        </f:facet>
+        <f:facet name="erptempmain"/>
         <f:facet name="erptempleft"/>
       </af:pageTemplate>
     </af:form>
