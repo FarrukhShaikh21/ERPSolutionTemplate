@@ -13,7 +13,7 @@
             </afc:facet>
         </afc:component>
     </af:xmlContent>
-    <af:decorativeBox id="pt_db1" dimensionsFrom="parent" topHeight="75px">
+    <af:decorativeBox id="pt_db1" topHeight="80px" dimensionsFrom="parent">
         <f:facet name="center">
             <af:panelSplitter id="pt_ps1" splitterPosition="250" dimensionsFrom="parent">
                 <f:facet name="first">
@@ -279,15 +279,15 @@
         <f:facet name="top">
             <af:panelGridLayout id="pt_pgl1" inlineStyle="background-color:#f7f7f7">
                 <af:gridRow id="pt_gr1" height="100%">
-                    <af:gridCell marginStart="0px" width="15%" id="pt_gc1" valign="stretch" halign="stretch">
-                        <af:image id="pt_i1" styleClass="AFStretchWidth"
-                                  source="#{resource['images:imgHawkLeftLogo.png']}"/>
+                    <af:gridCell marginStart="0px" width="20%" id="pt_gc1" valign="stretch" halign="stretch">
+                        <af:image id="pt_i1"
+                                  source="#{resource['images:imgHawkLogoLeft.png']}" styleClass="AFStretchWidth"/>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="45%" id="pt_gc3" halign="end" valign="middle">
+                    <af:gridCell width="40%" id="pt_gc3" halign="end" valign="middle">
                         <af:outputText value="#{pageFlowScope.ERPSolTempBean.LERPShowMenu=='ERPSOLNO'?'MODULES': pageFlowScope.ERPSolTempBean.LERPSolActivityName}" id="pt_ot5"
                                        inlineStyle="font-weight:bold;color:blue;font-size:large;" truncateAt="0"/>
                     </af:gridCell>
-                    <af:gridCell marginStart="5px" width="40%" marginEnd="0px" id="pt_gc4" halign="stretch">
+                    <af:gridCell width="40%" marginEnd="0px" id="pt_gc4" halign="stretch" valign="middle">
                         <af:panelGroupLayout id="pt_pgl2" layout="horizontal" halign="end">
                             <af:link text="#{pageFlowScope.ERPSolTempBean.LERPSolUserCode}" id="pt_l4"
                                      icon="/erpsoltempletservlet?erpsolfilename=#{pageFlowScope.ERPSolTempBean.LERPSolUserCode}"
